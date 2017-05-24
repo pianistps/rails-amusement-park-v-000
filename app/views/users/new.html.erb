@@ -1,0 +1,49 @@
+<h2>Sign up</h2>
+
+<%= form_for(@user) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :height, 'Height (in inches)' %>
+    <%= f.number_field :height %>
+    <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :happiness, 'How happy are you? (1-5 scale)' %>
+    <%= f.number_field :happiness %>
+    <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :nausea, 'How nauseous are you? (1-5 scale)' %>
+    <%= f.number_field :nausea %>
+    <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :tickets, 'How many dollars are in your pocket?' %>
+    <%= f.number_field :tickets %>
+  <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :admin, 'Check box if you are a theme park owner' %>
+    <%= f.check_box  :admin %>
+  <br>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, 'password' %>
+    <%= f.password_field  :password %>
+    <%= f.password_field   :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Create User' %>
+  </div>
+<% end %>
