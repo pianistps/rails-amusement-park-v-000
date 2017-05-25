@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
 
-
   def index
-
   end
 
   def new
@@ -26,7 +24,6 @@ class UsersController < ApplicationController
       redirect_to '/'
     end
   end
-
 
   private
 
