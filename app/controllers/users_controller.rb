@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def show
     if logged_in
-      @user = User.find(params[:id])
+      @user = User.find(session[:user_id])
     else
       redirect_to '/'
     end
